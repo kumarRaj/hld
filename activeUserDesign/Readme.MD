@@ -76,7 +76,7 @@ Database
      -> ActiveUserProcessing docker [2] - DONE
         -> Dockerize [missing] - DONE
         -> Rest API for [POST /activeUser ]
-            -> Redis update with TTL
+            -> Redis update with TTL - IN PROGRESS
         -> Rest API for [GET /visits?pageId]
             -> Query Redis
      -> ActiveUser service in docker nodejs [3]
@@ -84,7 +84,7 @@ Database
         -> Rest API for [GET /activeUsers] 
         -> Call ActiveUserProcessing to get active users
         -> Create local cache
-     -> Create Redis username/password/hostname. [1.1] - 
+     -> Create Redis username/password/hostname. [1.1] - DONE
         -> Redis docker [1.2] - DONE
      -> docker-compose with three images -> ActiveUser,ActiveUserProcessing and Redis
         -> Verify if they can interact with each other [4]
