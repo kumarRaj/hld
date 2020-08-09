@@ -73,17 +73,19 @@ Database
 
  /visit
  TODO:
-     -> ActiveUserProcessing docker [3]
+     -> ActiveUserProcessing docker [2] - DONE
+        -> Dockerize [missing] - DONE
         -> Rest API for [POST /activeUser ]
             -> Redis update with TTL
         -> Rest API for [GET /visits?pageId]
             -> Query Redis
-     -> ActiveUser service in docker nodejs [2] - DONE
+     -> ActiveUser service in docker nodejs [3]
+        -> Dockerize [missing]
         -> Rest API for [GET /activeUsers] 
         -> Call ActiveUserProcessing to get active users
         -> Create local cache
      -> Create Redis username/password/hostname. [1.1] - 
-        -> Redis docker [1.2]
+        -> Redis docker [1.2] - DONE
      -> docker-compose with three images -> ActiveUser,ActiveUserProcessing and Redis
         -> Verify if they can interact with each other [4]
      -> Testing using mock data to see if things work 
