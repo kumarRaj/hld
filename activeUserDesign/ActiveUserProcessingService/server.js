@@ -15,11 +15,10 @@ app.get('/redisHealth', async function (req, res) {
     res.status(200).send(redisHealth);
 });
 
-app.post('/activeUser', jsonParser, function (req, res) {
-	debugger;
-	let requestBody = JSON.parse(req.body)
-	let sessionID = requestBody.sessionID
-	RedisClient.save(req)
+app.post('/activeUser', function (req, res) {
+	let requestBody = req.body;
+	let sessionID = requestBody.sessionID;
+	RedisClient.save(sessionID)
 	res.status(200).send();
 });
 
