@@ -11,5 +11,8 @@ module.exports = {
     health: function(){
         client.set("health", "OK", redis.print);
         return getAsync("health")
+    },
+    save: function(sessionID){
+    	console.log(sessionID) 
     }
 }
