@@ -18,13 +18,15 @@ app.get('/redisHealth', async function (req, res) {
 app.post('/activeUser', function (req, res) {
 	let requestBody = req.body;
 	let sessionID = requestBody.sessionID;
-	RedisClient.save(sessionID)
+	let pageID = requestBody.pageID;
+	RedisClient.save(sessionID,pageID);
 	res.status(200).send();
 });
 
 app.get('/session', async function (req, res) {
-	let sessions = await RedisClient.get();
-    res.status(200).send({ "status": sessions });
+	let pageID = req.query.pageID;
+	let sessions = await RedisClient.get(pageID);
+    res.status(200).send(sessions);
 });
 
 
