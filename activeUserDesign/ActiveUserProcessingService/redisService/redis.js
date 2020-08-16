@@ -7,12 +7,23 @@ client.on("error", function(error) {
 });
 const getAsync = promisify(client.get).bind(client);
 
+/*
+const getAsync = return () => new Promise({
+	return client.get()
+})
+*/
+
 module.exports = {
     health: function(){
         client.set("health", "OK", redis.print);
         return getAsync("health")
     },
     save: function(sessionID){
-    	console.log(sessionID) 
+    	client.set()
+    	client.set("sessionID"+sessionID , sessionID , 'EX' , 20, redis.print) 
+
+    },
+    get: function(){
+    	return getAsync("sessionID")
     }
 }

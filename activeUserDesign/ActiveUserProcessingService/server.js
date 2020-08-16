@@ -22,6 +22,12 @@ app.post('/activeUser', function (req, res) {
 	res.status(200).send();
 });
 
+app.get('/session', async function (req, res) {
+	let sessions = await RedisClient.get();
+    res.status(200).send({ "status": sessions });
+});
+
+
 var server = app.listen(8081, function () {
     var host = server.address().address
     var port = server.address().port
