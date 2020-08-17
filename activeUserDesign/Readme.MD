@@ -13,10 +13,10 @@ Database
  TODO:
      -> ActiveUserProcessing docker [2] - DONE
         -> Dockerize [missing] - DONE
-        -> Rest API for [POST /activeUser ]
-            -> Redis update with TTL - IN PROGRESS
-        -> Rest API for [GET /visits?pageId]
-            -> Query Redis
+        -> Rest API for [POST /activeUser ] - DONE
+            -> Redis update with TTL - DONE
+        -> Rest API for [GET /visits?pageId] - DONE
+            -> Query Redis - DONE
      -> ActiveUser service in docker nodejs [3]
         -> Dockerize [missing]
         -> Rest API for [GET /activeUsers] 
@@ -28,15 +28,11 @@ Database
         -> Verify if they can interact with each other [4]
      -> Testing using mock data to see if things work 
 
-Why should i not install Redis rather than using a docker?
+To run ActiveUserProcessing without docker-compose
 
-docker-compose up
-    Provide endpoints to interact with each other
-
-    ActiveUserProcessing Service -> image
-    Redis Service -> image
-
-nodejs install
-
-Kubernetes
-ECS ??
+```
+ docker run  -p 6379:6379 redis:alpine
+ cd ActiveUserProcessingService
+ npm install
+ npm start
+ ```
