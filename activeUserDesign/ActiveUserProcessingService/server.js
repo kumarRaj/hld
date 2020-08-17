@@ -25,7 +25,8 @@ app.post('/activeUser', function (req, res) {
 
 app.get('/visits', async function (req, res) {
 	let pageID = req.query.pageID;
-	let sessions = await RedisClient.getUsers(pageID);
+    let sessions = await RedisClient.getUsers(pageID);
+    RedisClient.deleteRecordsOlderThan15Minutes(pageID);
     res.status(200).send(sessions);
 });
 
