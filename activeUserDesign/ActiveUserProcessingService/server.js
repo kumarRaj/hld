@@ -19,16 +19,15 @@ app.post('/activeUser', function (req, res) {
 	let requestBody = req.body;
 	let sessionID = requestBody.sessionID;
 	let pageID = requestBody.pageID;
-	RedisClient.save(sessionID,pageID);
+	RedisClient.save(sessionID ,pageID);
 	res.status(200).send();
 });
 
-app.get('/session', async function (req, res) {
+app.get('/visits', async function (req, res) {
 	let pageID = req.query.pageID;
-	let sessions = await RedisClient.get(pageID);
+	let sessions = await RedisClient.getUsers(pageID);
     res.status(200).send(sessions);
 });
-
 
 var server = app.listen(8081, function () {
     var host = server.address().address
