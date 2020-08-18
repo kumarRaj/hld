@@ -7,3 +7,8 @@
 ## What is a docker image
 
 - It is like a windows ISO image with some preinstalled software
+
+## Why do we run npm install before copying rest of the files in docker?
+## What does rebuilding the container mean?
+## What is a container?
+## What is the diff between docker image and container?
