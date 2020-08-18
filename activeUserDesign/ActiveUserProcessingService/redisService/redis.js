@@ -1,5 +1,5 @@
 const redis = require("redis");
-const client = redis.createClient({host: 'localhost'});
+const client = redis.createClient({host: 'redis'});
 const { promisify } = require('util');
 
 client.on("error", function(error) {
