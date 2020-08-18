@@ -1,0 +1,14 @@
+{
+  "name": "activeuser",
+  "version": "1.0.0",
+  "description": "Get the count of active users in a page",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "sunandan&raj",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
