@@ -4,12 +4,15 @@
   "description": "Get the count of active users in a page",
   "main": "server.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "author": "sunandan&raj",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "jest": "^26.4.1"
   }
 }

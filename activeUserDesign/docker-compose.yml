@@ -1,9 +1,14 @@
 version: '3'
 services:
-  web1:
+  active-user-processing:
     image: "active-user-processing"
     build: ./ActiveUserProcessingService
     ports:
       - "8081:8081"
+  active-user:
+    image: "active-user"
+    build: ./ActiveUser
+    ports:
+      - "8082:8082"
   redis:
     image: "redis:alpine"
