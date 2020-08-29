@@ -38,7 +38,7 @@ Goal : Overwhelm the server with alot of requests.
 
 
 
-##Questions:
+## Questions:
 - How much traffic can a server handle?
 - What is a loadbalancing?
     Load balancing refers to efficiently distributing incoming network traffic across a group of servers.
