@@ -19,13 +19,8 @@ Goal : Overwhelm the server with alot of requests.
  Solution 1:
  Task:
  
-    - create a loadbalancer to manage requests between servers[1]
-    - check incoming request limit in loadbalancer[2]
-    - loadbalancer will trigger a shell script[3]
-    - shell Script will run docker commands to create a new server[4]
-    - On successful creation of server shell script will inform load balancer[5]
-
-
+    - Create a loadbalancer to manage requests between servers [1]
+    - Enable autoscaling for servers based on certain criteria [2]
 
     Loadbalancer: Distributes network traffic among servers
 
@@ -35,9 +30,6 @@ Goal : Overwhelm the server with alot of requests.
     - Add/remove to the list of servers on new servers getting started or old servers which are not working
     - Create a trigger point, async and non-returning in nature, while executing the distribution algorithm
     - Monitor the incoming traffic
-
-
-
 
 ## Questions:
 - How much traffic can a server handle?
