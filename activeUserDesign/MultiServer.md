@@ -31,17 +31,17 @@ Goal : Overwhelm the server with alot of requests.
     - Create a trigger point, async and non-returning in nature, while executing the distribution algorithm
     - Monitor the incoming traffic
 
+## Task
 
-Task: 
-    - Install kubernetes and configure
-    - Create multiple containers
+    - Install kubernetes and configure - DONE
+    - Create multiple containers 
     - Redirect requests to specific container based on algo
     - Analyze the criteria and get the data on which we want to autoscale the containers
     - Write the above criteria in Kubernetes Config file
     - Add/Remove of Container, logic should be specified in Kubernetes Config file 
 
+## Questions
 
-## Questions:
 - How much traffic can a server handle?
 - What is a loadbalancing?
     Load balancing refers to efficiently distributing incoming network traffic across a group of servers.
