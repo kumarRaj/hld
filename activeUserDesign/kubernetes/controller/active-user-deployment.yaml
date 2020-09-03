@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: active-user-processing-deployment
   labels:
-    app: nginx
+    app: active-user-processing
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: active-user-processing
   template:
     metadata:
       labels:
-        app: nginx
+        app: active-user-processing
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
+      - name: active-user-processing
+        image: krraj/active-user:v1
         ports:
         - containerPort: 80
 
