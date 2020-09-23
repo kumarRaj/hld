@@ -8,3 +8,13 @@
 - Automated tests - early feedback.
 - Reduce integration problems.
 - Available artifact at anytime.
+
+Solution A:
+
+- CI system 
+- Collect changes of all branches which have the Complete marker
+- Run tests on them 
+- Create an artifact
+- Push it to artifactory
+
+
