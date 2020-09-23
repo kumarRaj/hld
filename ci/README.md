@@ -12,9 +12,17 @@
 Solution A:
 
 - CI system 
-- Collect changes of all branches which have the Complete marker
+- Create an artifact 
+- Collect changes of all branches which have the Complete marker 
 - Run tests on them 
-- Create an artifact
-- Push it to artifactory
+- Push it to artifactory 
 
+Problems:
 
+If we combine all branches how do we know which branch broke the build
+Overtime your ci pipeline becomes slow
+  - Large number of tests
+  - Flaky tests
+  - Number of steps that the CI has todo exceeds the infrastructure
+  - Wasteful execution even due to failures of the CI
+  - Incorrect triggers 
