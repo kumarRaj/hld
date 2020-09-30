@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: active-user-processing-deployment
+  labels:
+    app: active-user-processing
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: active-user-processing
+  template:
+    metadata:
+      labels:
+        app: active-user-processing
+    spec:
+      containers:
+      - name: active-user-processing
+        image: krraj/active-user:v1
+        ports:
+        - containerPort: 80
+
