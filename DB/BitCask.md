@@ -18,3 +18,11 @@ For example :
 
 Bitcask stores snapshots of each segment's hash map on disk. Which can be loaded into memory more quickly.
 
+# Working
+
+- Write the files in an in-memory balanced tree data structure as it comes in.(in-memory tree is called memtable)
+- As the memtable size grows. Data is written in SSTable(Sorted String Table).
+- As the data in memtable is sorted. Writing data in SSTable is efficient.
+- In order to serve the read request, Data is tried to pick from memtable, then the SSTable.
+- After proper intervals run the compaction process on the SSTables.
+
