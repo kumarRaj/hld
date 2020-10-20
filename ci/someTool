@@ -1,4 +1,5 @@
-Commit(Push) -> Trigger -> Pick Changes -> Run unit test cases -> Build (jar file equivalent) -> Deploy to a server -> Merge 
+Commit(Push) -> Trigger -> Pick Changes -> Run unit test cases -> Build (jar file equivalent)
+  -> Create docker image -> Copy docker image to docker hub -> Deploy to a server -> Merge 
 
 Trigger mail on failure
 
