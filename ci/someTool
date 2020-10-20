@@ -1,8 +1,17 @@
-Commit -> Trigger -> Pick Changes -> Build (jar file) -> Deploy to a server -> Run unit test cases on server -> Merge 
+Commit(Push) -> Trigger -> Pick Changes -> Run unit test cases -> Build (jar file equivalent) -> Deploy to a server -> Merge 
 
 Trigger mail on failure
 
+What is my application?
+  Some tool for displaying some graphs.
 
 Why should I push the changes?
 Where should I deploy?
+  How will you create a server?
+  Cloud get VM
+    Install docker, docker-compose
+    Copy docker compose to VM. How ??
+    docker-compose up
 Where should I test?
+  
+
