@@ -1,0 +1,8 @@
+Commit -> Trigger -> Pick Changes -> Build (jar file) -> Deploy to a server -> Run unit test cases on server -> Merge 
+
+Trigger mail on failure
+
+
+Why should I push the changes?
+Where should I deploy?
+Where should I test?
