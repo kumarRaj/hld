@@ -19,7 +19,7 @@ select Goals.name ,Goals.quantity, Goals.repetition, GoalActivity.completedQuant
 visualize/?startDate=20201024&endDate=20201030
 
 
- {
+``` {
 	segments: [
 		name: "Data Structures"
 		{
@@ -60,4 +60,4 @@ visualize/?startDate=20201024&endDate=20201030
 		}
 	]
 }
-
+```
