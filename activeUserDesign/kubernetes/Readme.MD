@@ -19,3 +19,8 @@ Image repository format - `username/imagename:version`.
 ### What does docker tag command mean
 
 The docker tag command is used to specify remote repository so that docker push can identify and push the image.
+
+# Kubernetes 102
+
+### Set up gcloud and kubectl credentials
+gcloud container clusters get-credentials [cluster-name] --zone [cluster-zone]
