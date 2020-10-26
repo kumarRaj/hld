@@ -22,5 +22,15 @@ The docker tag command is used to specify remote repository so that docker push 
 
 # Kubernetes 102
 
+### Why kubernetes
+- It helps in scaling. WHat this means is - it is very easy to setup multiple instances of my application.
+- It can handle loadbalancing for me.
+- It can scale up automatically.
+- It can manage network and connectivity automatically between services.
+
 ### Set up gcloud and kubectl credentials
-gcloud container clusters get-credentials [cluster-name] --zone [cluster-zone]
+- Create an instance of kubernetes engine in google cloud.
+- Create a cloud shell. A cloud shell is an external vm within the same network as my cluster which has access to my cluster.
+- To be able to run commands on the cluster use the command below
+`gcloud container clusters get-credentials [cluster-name] --zone [cluster-zone]`
+
