@@ -50,3 +50,18 @@ The docker tag command is used to specify remote repository so that docker push 
 
 How to give access to firewall access to a particular node in a cluster
 10.4.3.93
+
+
+# Kubernetes 104
+
+### Goal
+
+- Access Redis from active user processing service
+
+### Task
+- Create Redis POD 
+- Create service for Redis POD
+- Pass redis service connection info to active user processing
+- Communicate between two containers, active-user and active-user-processing.
+- Test.
+
