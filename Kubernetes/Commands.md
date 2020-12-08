@@ -32,3 +32,9 @@
 - kubectl delete deployment <specify your deployment>
 - kubectl delete deployment -all
   // Similar for pods, replicaSets and replicationContainer
+
+## Firewall
+
+- gcloud compute firewall-rules create test-node-port --allow tcp:<NODE_PORT>
+//Delete
+- gcloud compute firewall-rules delete test-node-port
