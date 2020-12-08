@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-service
+spec:
+  # type can be ClusterIp, Node Port or Load Balancer
+  type: NodePort
+  ports:
+    - targetPort: 80
+      port: 80
+      nodePort: 30008
+  # Only valid field is port default value for targetPort is 80
+  # and any random value is alloted for NodePort
+  selector:
+    app: myapp
+    type: frontend
+  # selector is used to specify or select the pod

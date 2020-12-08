@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: active-user-processing-deployment
+  labels:
+    app: active-user-processing-deployment
+    type: back-end
+spec:
+  template:
+    metadata:
+      name: active-user-processing-pod
+      labels:
+        app: active-user-processing-pod
+        type: back-end
+    spec:
+      containers:
+        - name: active-user-processing
+          image: "krraj/active-user:v1"
+          env:
+            - name: "PORT"
+              value: "8080"
+  replicas: 6
+  selector:
+    matchLabels:
+      app: active-user-processing-pod
+      type: back-end

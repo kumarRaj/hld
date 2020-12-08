@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+  labels:
+    app: myapp
+    type: test-app
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: test-app
+    spec:
+      containers:
+        - name: hello
+          image: "gcr.io/google-samples/hello-app:2.0"
+          env:
+            - name: "PORT"
+              value: "50000"
+  replicas: 6
+  selector:
+    matchLabels:
+      app: myapp
