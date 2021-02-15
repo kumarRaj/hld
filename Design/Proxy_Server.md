@@ -22,5 +22,12 @@
 - Control internet usage and improve speed
 - Privacy benefits and improved security
 - Get access to blocked resources
+- Cache resources which make call faster.
+
+### Disadvantage
+- Password and important details can get cached.
+- Free proxy server can be a risk od storing yout log.
+- Many proxy server don't encrypt your data.
+
 
 
