@@ -16,3 +16,11 @@
   knows. When you send a web request, your request goes to the proxy server first. The proxy server 
   then makes your web request on your behalf, collects the response from the web server, and forwards 
   you the web page data so you can see the page in your browser.
+  
+### Benefits of Proxy Server?
+
+- Control internet usage and improve speed
+- Privacy benefits and improved security
+- Get access to blocked resources
+
+
